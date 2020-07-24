@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/todolist/static/css/main.5712a9db.chunk.css",
+    "main.js": "/todolist/static/js/main.600cbd27.chunk.js",
+    "main.js.map": "/todolist/static/js/main.600cbd27.chunk.js.map",
+    "runtime-main.js": "/todolist/static/js/runtime-main.e7725399.js",
+    "runtime-main.js.map": "/todolist/static/js/runtime-main.e7725399.js.map",
+    "static/js/2.778beb1b.chunk.js": "/todolist/static/js/2.778beb1b.chunk.js",
+    "static/js/2.778beb1b.chunk.js.map": "/todolist/static/js/2.778beb1b.chunk.js.map",
+    "index.html": "/todolist/index.html",
+    "precache-manifest.ebbcc1d2dd00a4293f361b1555d00881.js": "/todolist/precache-manifest.ebbcc1d2dd00a4293f361b1555d00881.js",
+    "service-worker.js": "/todolist/service-worker.js",
+    "static/css/main.5712a9db.chunk.css.map": "/todolist/static/css/main.5712a9db.chunk.css.map",
+    "static/js/2.778beb1b.chunk.js.LICENSE.txt": "/todolist/static/js/2.778beb1b.chunk.js.LICENSE.txt",
+    "static/media/Popup.scss": "/todolist/static/media/Exti.14e2f379.svg",
+    "static/media/index.scss": "/todolist/static/media/Robotothinitalic.f31f3151.woff2",
+    "static/media/TaskFolder.scss": "/todolist/static/media/colors.105201ee.png",
+    "static/media/allFolders.svg": "/todolist/static/media/allFolders.244e2000.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7725399.js",
+    "static/js/2.778beb1b.chunk.js",
+    "static/css/main.5712a9db.chunk.css",
+    "static/js/main.600cbd27.chunk.js"
+  ]
+}
