@@ -1,0 +1,15 @@
+.taskBar {
+    width: 70%;
+    box-sizing: border-box;
+    padding: 60px;
+    position: relative;
+    transition: all ease .1s;
+    &__empty {
+        font-weight: bold;
+font-size: 32px;
+line-height: 39px;
+color: #C9D1D3;
+text-align: center;
+margin-top: 100px;
+    }
+}

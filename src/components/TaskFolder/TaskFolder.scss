@@ -1,0 +1,96 @@
+.taskFolder {
+  margin-bottom: 40px;
+  position: relative;
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    position: relative;
+    margin-bottom: 20px;
+    width: 90%;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    &:focus {
+      border: 1px solid red;
+    }
+  }
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &__add {
+    margin: 15px 0 0;
+    background-image: url(../../assets/addFolder.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+  &__empty {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
+
+    color: #c9d1d3;
+    text-align: center;
+  }
+
+  &__radiobox {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+    &:last-of-type {
+      margin: 0;
+    }
+    &_type_active {
+      border: 2px solid #525252;
+      box-sizing: border-box;
+    }
+  }
+  &__checkboxes {
+    min-width: 300px;
+    background-color: rgba(128, 128, 128, 0);
+    height: 20px;
+    position: relative;
+    top: -53px;
+    display: flex;
+    margin-top: 13px;
+    opacity: 0;
+    transition: all ease 0.2s;
+    &_type_visible {
+      opacity: 1;
+    }
+  }
+  &__checkboxes-button {
+    background-color: #4dd599;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 2px 5px;
+  }
+
+  &__editColor {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../assets/colors.png);
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+  }
+
+  &__line {
+    border: 1px solid #f2f2f2;
+    margin-bottom: 30px;
+  }
+}
