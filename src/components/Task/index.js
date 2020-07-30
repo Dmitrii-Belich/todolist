@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Draggable} from 'react-beautiful-dnd';
 import "./Task.scss";
 
 export default function Task({
@@ -7,18 +7,27 @@ export default function Task({
   onTaskClick,
   onTaskChange,
   onTaskDelete,
-
+index,
+folderId
 }) {
   const [inputValue] = React.useState(task.text);
   const textStyle = task.completed ? { textDecoration: "line-through" } : {};
   return (
-    <div className="task">
+    <Draggable draggableId={task.id.toString()} index={index}>
+      {(provided) => (
+    <li className="task"
+    ref={provided.innerRef}
+        {...provided.draggableProps}
+        {...provided.dragHandleProps}
+        
+    
+    >
       <button
         className={`task__checkbox ${
           task.completed && "task__checkbox_type_active"
         }`}
         onClick={() => {
-          onTaskClick(task.id);
+          onTaskClick(folderId, task.id);
         }}
       ></button>
 
@@ -27,10 +36,10 @@ export default function Task({
           className="task__text"
           style={textStyle}
           onInput={(evt) => {
-            onTaskChange(task.id, evt.target.innerText);
+            onTaskChange(folderId, task.id, evt.target.innerText);
           }}
           onBlur={(evt) => {
-            onTaskChange(task.id, evt.target.innerText);
+            onTaskChange(folderId, task.id, evt.target.innerText);
           }}
           onKeyDown={(evt) => {
             if (evt.key === "Enter") {
@@ -46,9 +55,10 @@ export default function Task({
       <button
         className="task__delete"
         onClick={() => {
-          onTaskDelete(task.id);
+          onTaskDelete(folderId, task.id);
         }}
       ></button>
-    </div>
-  );
+    </li> 
+    )}
+    </Draggable>);
 }
