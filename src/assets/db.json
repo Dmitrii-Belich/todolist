@@ -2,117 +2,79 @@
   "lists": [
     {
       "id": 1,
-      "name": "Продажи",
+      "name": "Что я умею?",
       "colorId": 5,
       "tasks": [
         {
-          "text": "test",
+          "text": "Добавлять, удалять и редактировать папки с задачами",
           "completed": false,
           "id": 10
         },
         {
-          "text": "qweqwe",
+          "text": "Добавлять, удалять, редактировать, отмечать выполненными сами задачи",
           "completed": false,
           "id": 11
         },
         {
-          "text": "qweqwe",
-          "completed": true,
-          "id": 12
-        },
-        {
-          "text": "123",
+          "text": "Менять задачи и папки с задачами местами",
           "completed": false,
-          "id": 13
+          "id": 12
         }
       ]
     },
     {
       "id": 2,
-      "name": "Фронтенд",
+      "name": "Технологии",
       "colorId": 4,
       "tasks": [
         {
           "id": 20,
-          "text": "Изучить JavaScript",
-          "completed": true
+          "text": "React",
+          "completed": false
         },
         {
           "id": 21,
-          "text": "Изучить паттерны проектирования",
+          "text": "SSCSS",
           "completed": false
-        },
-        {
-          "id": 22,
-          "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-          "completed": true
-        },
-        {
-          "id": 23,
-          "text": "Redux (redux-observable, redux-saga)",
-          "completed": false
-        },
-        {
-          "text": "123",
-          "completed": true,
-          "id": 24
-        },
-        {
-          "text": "222",
-          "completed": true,
-          "id": 25
         }
       ]
     },
     {
-      "id": 3,
-      "name": "Фильмы и сериалы",
-      "colorId": 3,
-      "tasks": []
-    },
-    {
-      "id": 4,
-      "name": "Книги",
-      "colorId": 2,
+      "id": 1,
+      "name": "Что я умею?",
+      "colorId": 5,
       "tasks": [
         {
-          "text": "Купить 1984!",
-          "completed": true,
-          "id": 40
+          "text": "Добавлять, удалять и редактировать папки с задачами",
+          "completed": false,
+          "id": 10
+        },
+        {
+          "text": "Добавлять, удалять, редактировать, отмечать выполненными сами задачи",
+          "completed": false,
+          "id": 11
+        },
+        {
+          "text": "Менять задачи и папки с задачами местами",
+          "completed": false,
+          "id": 12
         }
       ]
     },
     {
-      "id": 5,
-      "name": "Личное",
-      "colorId": 1,
-      "tasks": []
-    },
-    {
-      "name": "Спорт",
-      "colorId": 3,
-      "id": 6,
-      "tasks": []
-    },
-    {
-      "name": "Курс по ReactJS ToDo",
-      "colorId": 7,
-      "id": 7,
+      "id": 2,
+      "name": "Технологии",
+      "colorId": 4,
       "tasks": [
         {
-          "text": "Сделали сайдбар",
-          "completed": true,
-          "id": 70
+          "id": 20,
+          "text": "React",
+          "completed": false
         },
         {
-          "text": "Сделали список задач",
-          "completed": true,
-          "id": 71
-        },
-        {
-          "text": "Сделали удаление и редактирование задач и списков",
-          "completed": true,
-          "id": 72
+          "id": 21,
+          "text": "SSCSS",
+          "completed": false
         }
       ]
     }

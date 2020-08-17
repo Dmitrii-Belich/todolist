@@ -5,11 +5,12 @@ import DataBaseInitial from "./assets/db.json";
 
 export default function App() {
   const [activeFolder, setActiveFolder] = React.useState(0);
+  const [sideBarState, setSideBarState] = React.useState(false)
   const [folders, setFolders] = React.useState(
     localStorage.getItem("folders") && !localStorage.getItem("tasks")
       ? JSON.parse(localStorage.getItem("folders"))
       : () => {
-          localStorage.clear()
+          localStorage.clear();
           localStorage.setItem(
             "folders",
             JSON.stringify(DataBaseInitial.lists)
@@ -35,11 +36,12 @@ export default function App() {
   };
 
   const popupSubmitHandler = (name, colorId) => {
-    const newFolders = folders;
+    const newFolders = deepCopy(folders);
     newFolders.push({
       name: name,
       colorId: colorId,
-      id: folders[folders.length - 1] ? folders[folders.length - 1].id + 1 : 1,
+      id: folders.length ? folders.length + 1 : 1,
+      tasks: []
     });
     reIndex(newFolders);
     onPopupClose();
@@ -100,10 +102,9 @@ export default function App() {
     item.color = colors.find((color) => color.id === item.colorId).hex;
     return item;
   });
-  const reIndex = (folders, tasks) => {
-    const newFolders = deepCopy(folders);
-    setFolders(newFolders);
-    refreshStorage("folders", newFolders);
+  const reIndex = (folders) => {
+    setFolders(folders);
+    refreshStorage("folders", folders);
   };
   const onFolderChange = (id, value) => {
     const newFolders = deepCopy(folders);
@@ -120,9 +121,7 @@ export default function App() {
   const onDropInSameFolder = (nextindex, folderId, taskId) => {
     const newFolders = deepCopy(folders);
     const currentTasks = newFolders.find((item) => item.id === folderId).tasks;
-    const currentTask = currentTasks.find(
-      (item) => item.id === taskId
-    ); 
+    const currentTask = currentTasks.find((item) => item.id === taskId);
     currentTasks.splice(
       currentTasks.findIndex((item) => item.id === taskId),
       1
@@ -131,53 +130,76 @@ export default function App() {
     currentTasks.push(currentTask, ...remainingTasks);
     reIndex(newFolders);
   };
-  const onDropInEnotherFolder = (nextindex, previousFolderId, nextFolderId, taskId) => {
-    console.log(nextindex, nextFolderId, previousFolderId,  taskId)
-         const newFolders = deepCopy(folders);
-      const previousTasks = newFolders.find((item) => item.id === previousFolderId).tasks;
-      const currentTask = previousTasks.find(
-        (item) => item.id === taskId
-      ); 
-      previousTasks.splice(
-        previousTasks.findIndex((item) => item.id === taskId),
-        1
-      );
-      const nextTasks = newFolders.find((item) => item.id === nextFolderId).tasks;
-      currentTask.id = findFreeId(nextFolderId, nextTasks)
-      const remainingTasks = nextTasks.splice(nextindex);
-      nextTasks.push(currentTask, ...remainingTasks);
-      reIndex(newFolders);
+  const onDropInEnotherFolder = (
+    nextindex,
+    previousFolderId,
+    nextFolderId,
+    taskId
+  ) => {
+    console.log(nextindex, nextFolderId, previousFolderId, taskId);
+    const newFolders = deepCopy(folders);
+    const previousTasks = newFolders.find(
+      (item) => item.id === previousFolderId
+    ).tasks;
+    const currentTask = previousTasks.find((item) => item.id === taskId);
+    previousTasks.splice(
+      previousTasks.findIndex((item) => item.id === taskId),
+      1
+    );
+    const nextTasks = newFolders.find((item) => item.id === nextFolderId).tasks;
+    currentTask.id = findFreeId(nextFolderId, nextTasks);
+    const remainingTasks = nextTasks.splice(nextindex);
+    nextTasks.push(currentTask, ...remainingTasks);
+    reIndex(newFolders);
+  };
+  const dropFolder = (nextindex, folderId) => {
+    const newFolders = deepCopy(folders);
+    const currentFolder = newFolders.find((item) => item.id === folderId);
+    newFolders.splice(
+      newFolders.findIndex((item) => item.id === folderId),
+      1
+    );
+    const remainingFolders = newFolders.splice(nextindex);
+    newFolders.push(currentFolder, ...remainingFolders);
+    reIndex(newFolders);
   };
 
-  const findFreeId = (folderId, array) =>{
+  const findFreeId = (folderId, array) => {
     if (!array.length) {
-      return +(folderId.toString()+0)
+      return +(folderId.toString() + 0);
     }
-    let i = 0
-    let id = +(folderId.toString()+i)
+    let i = 0;
+    let id = +(folderId.toString() + i);
     // eslint-disable-next-line
-    while (array.some(item => item.id === id)) {
-      id = +(folderId.toString()+i) 
-      i++
+    while (array.some((item) => item.id === id)) {
+      id = +(folderId.toString() + i);
+      i++;
     }
-    return id
-
-  }
+    return id;
+  };
 
   const deepCopy = (array) => {
     const newArray = [];
     array.forEach((item, index) => {
       newArray.push(Object.assign({}, item));
       newArray[index].tasks = [];
-       array[index].tasks.forEach((item) => {
+      array[index].tasks.forEach((item) => {
         newArray[index].tasks.push(Object.assign({}, item));
-      }); 
+      });
     });
     return newArray;
   };
 
   return (
     <div className="todo">
+      <button
+        className={`todo__sidebarButton ${
+          sideBarState && "todo__sidebarButton_type_close"
+        }`}
+        onClick={() => {
+          setSideBarState(!sideBarState);
+        }}
+      ></button>
       <Sidebar
         folders={folders}
         activeFolder={activeFolder}
@@ -188,6 +210,9 @@ export default function App() {
         colors={colors}
         onPopupClose={onPopupClose}
         onDeleteFolderClick={onDeleteFolderClick}
+        onDrop={dropFolder}
+        sideBarState={sideBarState}
+        setSideBarState={setSideBarState}
       />
       <TaskBar
         onDropInSameFolder={onDropInSameFolder}
@@ -205,6 +230,7 @@ export default function App() {
         onFolderColorChange={onFolderColorChange}
         onDropInEnotherFolder={onDropInEnotherFolder}
       />
+      
     </div>
   );
 }

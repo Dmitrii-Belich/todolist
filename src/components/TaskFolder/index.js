@@ -75,7 +75,7 @@ export default function TaskFolder({
     <button
       className="taskFolder__editColor"
       onClick={() => {
-        setIsColorRedacting(true);
+        setIsColorRedacting(!isColorRedacting);
       }}
     ></button>
     <Droppable droppableId={id.toString()}>
