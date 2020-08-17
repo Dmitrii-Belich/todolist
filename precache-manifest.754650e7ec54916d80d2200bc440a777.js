@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e38f9620eba09aba57e2efc6510a5ed",
+    "revision": "32def7aaa49af01e7ca76be55e6b3298",
     "url": "/todolist/index.html"
   },
   {
-    "revision": "9d05eb7da87d1a549d4f",
-    "url": "/todolist/static/css/main.0298d6e0.chunk.css"
+    "revision": "2ce4e09e92f5bdf361e0",
+    "url": "/todolist/static/css/main.aab340bb.chunk.css"
   },
   {
-    "revision": "7a2abea1c5cee5b540e7",
-    "url": "/todolist/static/js/2.44efc794.chunk.js"
+    "revision": "0bee2319b00bb6d4f5a1",
+    "url": "/todolist/static/js/2.f962bdfa.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/todolist/static/js/2.44efc794.chunk.js.LICENSE.txt"
+    "url": "/todolist/static/js/2.f962bdfa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9d05eb7da87d1a549d4f",
-    "url": "/todolist/static/js/main.5bb7818b.chunk.js"
+    "revision": "2ce4e09e92f5bdf361e0",
+    "url": "/todolist/static/js/main.a470bab3.chunk.js"
   },
   {
     "revision": "197f51c8578d731c6831",
     "url": "/todolist/static/js/runtime-main.e7725399.js"
   },
   {
-    "revision": "14e2f379ea2f16993535086cc7b87b36",
-    "url": "/todolist/static/media/Exti.14e2f379.svg"
+    "revision": "3e613d2b539a02ea0687fc1aacbc0092",
+    "url": "/todolist/static/media/EditButton.3e613d2b.svg"
+  },
+  {
+    "revision": "809fbcbb0a354c691924a06167373bb9",
+    "url": "/todolist/static/media/Exti.809fbcbb.svg"
   },
   {
     "revision": "58bf8e0bd1dd213bf745e9d748caf175",
@@ -172,15 +176,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/todolist/static/media/Robotothinitalic.f31f3151.woff2"
   },
   {
-    "revision": "ba9a0c8a51696323be441671bb7439c5",
-    "url": "/todolist/static/media/addFolder.ba9a0c8a.svg"
+    "revision": "35b064331cb3db38f98a0e44f6467efe",
+    "url": "/todolist/static/media/addFolder.35b06433.svg"
   },
   {
-    "revision": "244e20008d74aff60d94697dd9f641c6",
-    "url": "/todolist/static/media/allFolders.244e2000.svg"
+    "revision": "733abe6daa8923addf0ff2baca059015",
+    "url": "/todolist/static/media/allFolders.733abe6d.svg"
   },
   {
     "revision": "105201eee07f80268426c455be10910d",
     "url": "/todolist/static/media/colors.105201ee.png"
+  },
+  {
+    "revision": "7c63f80543cdd4851e34e157d7b44da1",
+    "url": "/todolist/static/media/menu.7c63f805.svg"
   }
 ]);
