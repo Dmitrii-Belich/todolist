@@ -43,7 +43,23 @@ box-sizing: border-box;
         background-position: center;
         background-size: contain;
         border: none;   
-        margin-left: auto;
+        opacity: 1;
+        transition: all ease .1s;
+        margin-left: 10px;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        outline: none;
+    }
+    &__edit {
+        background-image: url("../../assets/EditButton.svg");
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0);
+        background-position: center;
+        background-size: contain;
+        border: none;   
         opacity: 1;
         transition: all ease .1s;
         margin-left: 10px;
