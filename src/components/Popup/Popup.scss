@@ -1,88 +1,86 @@
 .popup {
-    position: relative;
-    width: 235px;
-    height: 148px;
-    left: 30px;
-    background: #FFFFFF;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    border: 1px solid  rgba(0, 0, 0, 0.1);
-    z-index: 5;
-    opacity: 0;
-    padding: 15px 18px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    transition: all linear .2s;
+  position: relative;
+  width: 235px;
+  height: 148px;
+  left: 30px;
+  background: #ffffff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  opacity: 0;
+  padding: 15px 18px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all linear 0.2s;
 
-    &_type_visible {
-        opacity: 1;
-    }
-    &__exit {
-        background-image: url(../../assets/Exti.svg);
+  &_type_visible {
+    opacity: 1;
+  }
+  &__exit {
+    background-image: url(../../assets/Exti.svg);
     width: 21px;
-height: 21px;
-background-color: rgba(0, 0, 0, 0);
-border: none;   
-position: absolute;
-right: -10px;
-top: -10px;
-cursor: pointer;
-}
-&__input {
+    height: 21px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+  }
+  &__input {
     width: 100%;
     font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-padding: 8px 10px;
-box-sizing: border-box;
-background: #FFFFFF;
-border: 1px solid #EFEFEF;
-box-sizing: border-box;
-&::placeholder {
-    color: #C7C7C7;
-
-}
-
-}
-&__radiobox {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    &::placeholder {
+      color: #c7c7c7;
+    }
+  }
+  &__radiobox {
     width: 20px;
     height: 20px;
     position: relative;
     border-radius: 50%;
     margin-right: 5px;
     cursor: pointer;
-    &:last-of-type{
-        margin: 0;
+    &:last-of-type {
+      margin: 0;
     }
     &_type_active {
-        border: 2px solid #525252;
-        box-sizing: border-box;
+      border: 2px solid #525252;
+      box-sizing: border-box;
     }
-}
-&__checkboxes {
+  }
+  &__checkboxes {
     display: flex;
     margin-top: 13px;
-}
-&__submit {
+  }
+  &__submit {
     width: 100%;
-    background: #4DD599;
+    background: #4dd599;
     border: none;
     padding: 10px 0;
-border-radius: 4px;
-font-weight: 600;
-font-size: 14px;
-line-height: 17px;
-text-align: center;
-letter-spacing: 0.15px;
-color: #FFFFFF;
-align-self: flex-end;
-margin-top: auto;
-cursor: pointer;
-transition: all linear .1s;
-&_type_disabled {
-    opacity: .3;
-    cursor: not-allowed;
-}
-}
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    color: #ffffff;
+    align-self: flex-end;
+    margin-top: auto;
+    cursor: pointer;
+    transition: all linear 0.1s;
+    &_type_disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
 }

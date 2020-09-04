@@ -29,12 +29,11 @@
     width: 100%;
     box-sizing: border-box;
     @media screen and (max-width: 700px) {
-    font-size: 13px;
-  }
-  @media screen and (max-width: 450px) {
-    font-size: 11px;
-
-  }
+      font-size: 13px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 11px;
+    }
     &:focus {
       border: 1px solid green;
     }

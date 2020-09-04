@@ -14,7 +14,7 @@ export default function Tasks({
   colors,
   onFolderColorChange,
   onDropInSameFolder,
-  onDropInEnotherFolder
+  onDropInEnotherFolder,
 }) {
   return (
     <DragDropContext
@@ -38,11 +38,13 @@ export default function Tasks({
           result.destination &&
           result.source.droppableId !== result.destination.droppableId
         ) {
-          console.log(result)
-          onDropInEnotherFolder(result.destination.index, +result.source.droppableId, +result.destination.droppableId, +result.draggableId, )
-          /* onDropInSameFolder(
-            
-          ); */
+          console.log(result);
+          onDropInEnotherFolder(
+            result.destination.index,
+            +result.source.droppableId,
+            +result.destination.droppableId,
+            +result.draggableId
+          );
         }
       }}
     >

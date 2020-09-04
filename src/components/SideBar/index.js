@@ -33,9 +33,14 @@ export default function Sidebar({
         }
       }}
     >
-        {sideBarState && <div className="sidebar__overlay" onClick={() => {
-            setSideBarState(!sideBarState)
-        }}></div>}
+      {sideBarState && (
+        <div
+          className="sidebar__overlay"
+          onClick={() => {
+            setSideBarState(!sideBarState);
+          }}
+        ></div>
+      )}
       <div className={`sidebar ${sideBarState && "sidebar_active"}`}>
         {folders.length !== 0 && (
           <Folder
@@ -97,7 +102,6 @@ export default function Sidebar({
           colors={colors}
           onPopupClose={onPopupClose}
         />
-        
       </div>
     </DragDropContext>
   );

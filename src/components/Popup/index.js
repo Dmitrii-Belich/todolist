@@ -9,10 +9,11 @@ export default function Popup({ isActive, onSubmit, colors, onPopupClose }) {
       onSubmit={(evt) => {
         evt.preventDefault();
         onSubmit(inputValue, selectedColor);
-        setTimeout(()=> {setInputValue('')
-            setSelectedColor(1)}, 200)
-            }
-      }
+        setTimeout(() => {
+          setInputValue("");
+          setSelectedColor(1);
+        }, 200);
+      }}
       className={`popup ${isActive && "popup_type_visible"}`}
       noValidate
     >
@@ -42,16 +43,25 @@ export default function Popup({ isActive, onSubmit, colors, onPopupClose }) {
           );
         })}
       </div>
-      <button type="submit" className={`popup__submit ${ !inputValue && "popup__submit_type_disabled"}`} disabled={!inputValue && "disabled"}>
+      <button
+        type="submit"
+        className={`popup__submit ${
+          !inputValue && "popup__submit_type_disabled"
+        }`}
+        disabled={!inputValue && "disabled"}
+      >
         Добавить
       </button>
       <button
         type="button"
         className="popup__exit"
-        onClick={() => {onPopupClose()
-            setTimeout(()=> {setInputValue('')
-            setSelectedColor(1)}, 200)
-            }}
+        onClick={() => {
+          onPopupClose();
+          setTimeout(() => {
+            setInputValue("");
+            setSelectedColor(1);
+          }, 200);
+        }}
       ></button>
     </form>
   );

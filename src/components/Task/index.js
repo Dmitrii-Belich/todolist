@@ -1,5 +1,5 @@
 import React from "react";
-import { Draggable } from 'react-beautiful-dnd';
+import { Draggable } from "react-beautiful-dnd";
 import "./Task.scss";
 
 export default function Task({
@@ -8,16 +8,17 @@ export default function Task({
   onTaskChange,
   onTaskDelete,
   index,
-  folderId
+  folderId,
 }) {
   const [inputValue] = React.useState(task.text);
-  const [editable, setEditable] = React.useState(false)
+  const [editable, setEditable] = React.useState(false);
   const textStyle = task.completed ? { textDecoration: "line-through" } : {};
-  const text = React.useRef()
+  const text = React.useRef();
   return (
     <Draggable draggableId={task.id.toString()} index={index}>
       {(provided) => (
-        <li className="task"
+        <li
+          className="task"
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
@@ -25,7 +26,7 @@ export default function Task({
           <button
             className={`task__checkbox ${
               task.completed && "task__checkbox_type_active"
-              }`}
+            }`}
             onClick={() => {
               onTaskClick(folderId, task.id);
             }}
@@ -38,12 +39,12 @@ export default function Task({
             }}
             onBlur={(evt) => {
               onTaskChange(folderId, task.id, evt.target.innerText);
-              setEditable(false)
+              setEditable(false);
             }}
             onKeyDown={(evt) => {
               if (evt.key === "Enter") {
                 evt.preventDefault();
-                evt.target.blur()
+                evt.target.blur();
               }
             }}
             contentEditable={editable}
@@ -52,19 +53,22 @@ export default function Task({
           >
             {inputValue}
           </p>
-          <button className="task__edit" onClick={async ()=> {
-            await setEditable(true)
-            text.current.focus()
-          }}></button>
-      
+          <button
+            className="task__edit"
+            onClick={async () => {
+              await setEditable(true);
+              text.current.focus();
+            }}
+          ></button>
+
           <button
             className="task__delete"
             onClick={() => {
               onTaskDelete(folderId, task.id);
             }}
           ></button>
-          
         </li>
       )}
-    </Draggable>);
+    </Draggable>
+  );
 }

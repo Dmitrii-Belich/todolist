@@ -2,83 +2,78 @@
   &__folder {
     width: 100%;
     height: 37px;
-    cursor: pointer;
     background: none;
     border: none;
     display: flex;
     position: relative;
     margin-bottom: 10px;
-    transition: all ease .1s;
+    transition: all ease 0.1s;
     box-sizing: border-box;
 
-    &_type_active{
-        background-color: white;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    transform: scale(1.05);
+    &_type_active {
+      background-color: white;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      transform: scale(1.05);
     }
-    
+
     &:last-of-type {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
-    
-}
+  }
   &__icon {
     width: 20px;
     height: 20px;
     margin: 10px 0 10px 10px;
 
-&_type_folder {
-    position: relative;
+    &_type_folder {
+      position: relative;
 
-
-border-radius: 50%;
-
-}
+      border-radius: 50%;
+    }
   }
   &__folder-name {
     width: 75%;
     text-align: start;
     font-size: 14px;
     @media screen and (max-width: 700px) {
-    font-size: 13px;
-    font-weight: 800;
-  }
-  @media screen and (max-width: 450px) {
-    font-size: 11px;
-    font-weight: 900;
-  }
+      font-size: 13px;
+      font-weight: 800;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 11px;
+      font-weight: 900;
+    }
     line-height: 16px;
     letter-spacing: 0.15px;
-      margin-left: 10px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-top: 12px;
-      margin-bottom: 10px;
-      margin-right: 20px;
-      
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    margin-right: 20px;
   }
-&__delete {
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.24741 5L9.73899 1.50842C9.9047 1.343 9.99791 1.11853 9.99812 0.884393C9.99832 0.650251 9.90551 0.425617 9.74009 0.259907C9.57468 0.0941973 9.35021 0.000986589 9.11606 0.000779811C8.88192 0.000573033 8.65729 0.0933872 8.49158 0.258804L5 3.75038L1.50842 0.258804C1.34271 0.0930948 1.11796 0 0.883613 0C0.649264 0 0.424514 0.0930948 0.258804 0.258804C0.0930948 0.424514 0 0.649264 0 0.883613C0 1.11796 0.0930948 1.34271 0.258804 1.50842L3.75038 5L0.258804 8.49158C0.0930948 8.65729 0 8.88204 0 9.11639C0 9.35074 0.0930948 9.57549 0.258804 9.7412C0.424514 9.90691 0.649264 10 0.883613 10C1.11796 10 1.34271 9.90691 1.50842 9.7412L5 6.24962L8.49158 9.7412C8.65729 9.90691 8.88204 10 9.11639 10C9.35074 10 9.57549 9.90691 9.7412 9.7412C9.90691 9.57549 10 9.35074 10 9.11639C10 8.88204 9.90691 8.65729 9.7412 8.49158L6.24741 5Z' fill='%23E3E3E3'/%3E%3C/svg%3E%0A");
-background-repeat: no-repeat;
-  min-width: 10px;
-min-height: 10px;
-background-color: rgba(0, 0, 0, 0);
-border: none;   
-margin-top: 14px;
-margin-left: auto;
-margin-right: 10px;
-visibility: hidden;
-opacity: 0;
-transition: all ease .1s;
-position: absolute;
-right: 0;
-top: 0;
-cursor: pointer;
-.sidebar__folder:hover &{
-  visibility: visible;
-opacity: 1;
-}
-}
+  &__delete {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.24741 5L9.73899 1.50842C9.9047 1.343 9.99791 1.11853 9.99812 0.884393C9.99832 0.650251 9.90551 0.425617 9.74009 0.259907C9.57468 0.0941973 9.35021 0.000986589 9.11606 0.000779811C8.88192 0.000573033 8.65729 0.0933872 8.49158 0.258804L5 3.75038L1.50842 0.258804C1.34271 0.0930948 1.11796 0 0.883613 0C0.649264 0 0.424514 0.0930948 0.258804 0.258804C0.0930948 0.424514 0 0.649264 0 0.883613C0 1.11796 0.0930948 1.34271 0.258804 1.50842L3.75038 5L0.258804 8.49158C0.0930948 8.65729 0 8.88204 0 9.11639C0 9.35074 0.0930948 9.57549 0.258804 9.7412C0.424514 9.90691 0.649264 10 0.883613 10C1.11796 10 1.34271 9.90691 1.50842 9.7412L5 6.24962L8.49158 9.7412C8.65729 9.90691 8.88204 10 9.11639 10C9.35074 10 9.57549 9.90691 9.7412 9.7412C9.90691 9.57549 10 9.35074 10 9.11639C10 8.88204 9.90691 8.65729 9.7412 8.49158L6.24741 5Z' fill='%23E3E3E3'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-top: 14px;
+    margin-left: auto;
+    margin-right: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.1s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    .sidebar__folder:hover & {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }

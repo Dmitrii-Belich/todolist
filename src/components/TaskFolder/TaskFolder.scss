@@ -5,14 +5,14 @@
     font-weight: bold;
     font-size: 32px;
     @media screen and (max-width: 700px) {
-    font-size: 25px;
-  }
-  @media screen and (max-width: 450px) {
-    font-size: 17px;
-    width: 80%;
-    line-height: 20px;
-    margin-bottom: 17px;
-  }
+      font-size: 25px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 17px;
+      width: 80%;
+      line-height: 20px;
+      margin-bottom: 17px;
+    }
     line-height: 39px;
     position: relative;
     margin-bottom: 20px;
@@ -29,7 +29,6 @@
   }
 
   &__add {
-
     background-image: url(../../assets/addFolder.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +67,6 @@
     }
   }
   &__checkboxes {
-    
     background-color: rgba(128, 128, 128, 0);
     height: 20px;
     position: relative;
@@ -78,8 +76,8 @@
     opacity: 0;
     transition: all ease 0.2s;
     @media screen and (max-width: 450px) {
-top: -38px;
-        }
+      top: -38px;
+    }
     &_type_visible {
       opacity: 1;
     }
@@ -92,11 +90,11 @@ top: -38px;
     margin-left: 10px;
     padding: 2px 5px;
     @media screen and (max-width: 450px) {
-  font-size: 8px;
-  height: 15px;
-  padding: 2px;
-  margin-top: 4px;
-  line-height: 7px;
+      font-size: 8px;
+      height: 15px;
+      padding: 2px;
+      margin-top: 4px;
+      line-height: 7px;
     }
   }
 
@@ -114,7 +112,7 @@ top: -38px;
     @media screen and (max-width: 450px) {
       width: 20px;
       height: 20px;
-        }
+    }
   }
 
   &__line {
@@ -122,6 +120,6 @@ top: -38px;
     margin-bottom: 30px;
     @media screen and (max-width: 450px) {
       margin-bottom: 15px;
-        }
+    }
   }
 }

@@ -5,7 +5,7 @@ import DataBaseInitial from "./assets/db.json";
 
 export default function App() {
   const [activeFolder, setActiveFolder] = React.useState(0);
-  const [sideBarState, setSideBarState] = React.useState(false)
+  const [sideBarState, setSideBarState] = React.useState(false);
   const [folders, setFolders] = React.useState(
     localStorage.getItem("folders") && !localStorage.getItem("tasks")
       ? JSON.parse(localStorage.getItem("folders"))
@@ -41,7 +41,7 @@ export default function App() {
       name: name,
       colorId: colorId,
       id: folders.length ? folders.length + 1 : 1,
-      tasks: []
+      tasks: [],
     });
     reIndex(newFolders);
     onPopupClose();
@@ -230,7 +230,6 @@ export default function App() {
         onFolderColorChange={onFolderColorChange}
         onDropInEnotherFolder={onDropInEnotherFolder}
       />
-      
     </div>
   );
 }

@@ -16,9 +16,8 @@
   &__sidebarButton {
     display: none;
     @media screen and (max-width: 550px) {
-        
-    display: block;
-  }
+      display: block;
+    }
     background-image: url("./assets/menu.svg");
     background-repeat: no-repeat;
     min-width: 25px;
