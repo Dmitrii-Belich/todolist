@@ -136,7 +136,6 @@ export default function App() {
     nextFolderId,
     taskId
   ) => {
-    console.log(nextindex, nextFolderId, previousFolderId, taskId);
     const newFolders = deepCopy(folders);
     const previousTasks = newFolders.find(
       (item) => item.id === previousFolderId

@@ -38,7 +38,6 @@ export default function Tasks({
           result.destination &&
           result.source.droppableId !== result.destination.droppableId
         ) {
-          console.log(result);
           onDropInEnotherFolder(
             result.destination.index,
             +result.source.droppableId,

@@ -27,7 +27,6 @@ export default function Sidebar({
         }
       }}
       onDragEnd={(result) => {
-        console.log("drop", result);
         if (result.destination) {
           onDrop(result.destination.index, +result.draggableId);
         }
