@@ -1,27 +1,25 @@
 {
   "files": {
-    "main.css": "/todolist/static/css/main.2ddf4747.chunk.css",
-    "main.js": "/todolist/static/js/main.6db2dd18.chunk.js",
-    "main.js.map": "/todolist/static/js/main.6db2dd18.chunk.js.map",
-    "runtime-main.js": "/todolist/static/js/runtime-main.e7725399.js",
-    "runtime-main.js.map": "/todolist/static/js/runtime-main.e7725399.js.map",
-    "static/js/2.f962bdfa.chunk.js": "/todolist/static/js/2.f962bdfa.chunk.js",
-    "static/js/2.f962bdfa.chunk.js.map": "/todolist/static/js/2.f962bdfa.chunk.js.map",
+    "main.css": "/todolist/static/css/main.bb308475.chunk.css",
+    "main.js": "/todolist/static/js/main.32fcd7f9.chunk.js",
+    "main.js.map": "/todolist/static/js/main.32fcd7f9.chunk.js.map",
+    "runtime-main.js": "/todolist/static/js/runtime-main.8da5e66b.js",
+    "runtime-main.js.map": "/todolist/static/js/runtime-main.8da5e66b.js.map",
+    "static/js/2.7cbd9c37.chunk.js": "/todolist/static/js/2.7cbd9c37.chunk.js",
+    "static/js/2.7cbd9c37.chunk.js.map": "/todolist/static/js/2.7cbd9c37.chunk.js.map",
     "index.html": "/todolist/index.html",
-    "precache-manifest.4ff66b914190608c6e7609b10df8b38a.js": "/todolist/precache-manifest.4ff66b914190608c6e7609b10df8b38a.js",
-    "service-worker.js": "/todolist/service-worker.js",
-    "static/css/main.2ddf4747.chunk.css.map": "/todolist/static/css/main.2ddf4747.chunk.css.map",
-    "static/js/2.f962bdfa.chunk.js.LICENSE.txt": "/todolist/static/js/2.f962bdfa.chunk.js.LICENSE.txt",
-    "static/media/Task.scss": "/todolist/static/media/EditButton.3e613d2b.svg",
-    "static/media/Popup.scss": "/todolist/static/media/Exti.809fbcbb.svg",
-    "static/media/index.scss": "/todolist/static/media/menu.7c63f805.svg",
-    "static/media/TaskFolder.scss": "/todolist/static/media/colors.105201ee.png",
-    "static/media/allFolders.svg": "/todolist/static/media/allFolders.733abe6d.svg"
+    "static/css/main.bb308475.chunk.css.map": "/todolist/static/css/main.bb308475.chunk.css.map",
+    "static/js/2.7cbd9c37.chunk.js.LICENSE.txt": "/todolist/static/js/2.7cbd9c37.chunk.js.LICENSE.txt",
+    "static/media/Task.scss": "/todolist/static/media/EditButton.2dda474d.svg",
+    "static/media/Popup.scss": "/todolist/static/media/Exti.ac7b9278.svg",
+    "static/media/index.scss": "/todolist/static/media/menu.10c05eed.svg",
+    "static/media/TaskFolder.scss": "/todolist/static/media/colors.71151523.png",
+    "static/media/allFolders.a862c15f.svg": "/todolist/static/media/allFolders.a862c15f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e7725399.js",
-    "static/js/2.f962bdfa.chunk.js",
-    "static/css/main.2ddf4747.chunk.css",
-    "static/js/main.6db2dd18.chunk.js"
+    "static/js/runtime-main.8da5e66b.js",
+    "static/js/2.7cbd9c37.chunk.js",
+    "static/css/main.bb308475.chunk.css",
+    "static/js/main.32fcd7f9.chunk.js"
   ]
 }
