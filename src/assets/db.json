@@ -38,45 +38,6 @@
           "completed": false
         }
       ]
-    },
-    {
-      "id": 1,
-      "name": "Что я умею?",
-      "colorId": 5,
-      "tasks": [
-        {
-          "text": "Добавлять, удалять и редактировать папки с задачами",
-          "completed": false,
-          "id": 10
-        },
-        {
-          "text": "Добавлять, удалять, редактировать, отмечать выполненными сами задачи",
-          "completed": false,
-          "id": 11
-        },
-        {
-          "text": "Менять задачи и папки с задачами местами",
-          "completed": false,
-          "id": 12
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Технологии",
-      "colorId": 4,
-      "tasks": [
-        {
-          "id": 20,
-          "text": "React",
-          "completed": false
-        },
-        {
-          "id": 21,
-          "text": "SSCSS",
-          "completed": false
-        }
-      ]
     }
   ],
 
